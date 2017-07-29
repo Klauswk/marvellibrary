@@ -42,6 +42,8 @@ For package.json, just add `config` object,
 
 To test the app, just use the default command, `npm test`, or for unit only test `npm run test:unit`, and integration test `npm run test:integration`.
 
+Finally, to run, simple use `npm start`, it uses the port 8888 as default, but can be configure using `export PORT=9999`
+
 APP URL : https://marvel-library.herokuapp.com
 
 [![Build Status](https://travis-ci.org/Klauswk/marvellibrary.svg?branch=master)](https://travis-ci.org/Klauswk/marvellibrary)
