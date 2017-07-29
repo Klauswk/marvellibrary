@@ -4,6 +4,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
+    background-color: #FFF;
 }
 
 .fixed-top {
@@ -20,4 +21,11 @@
 
 .footer {
   padding:10px;
+}
+
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
 }

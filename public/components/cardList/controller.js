@@ -1,4 +1,5 @@
-angular.module('marvelLibrary').controller('CardListController', function ($scope) {
+angular.module('marvelLibrary').controller('CardListController', ['$scope', function ($scope) {
+    $scope.hasResult = true;
     $scope.cards = [{
         id: 581,
         title: "Thor (1998 - 2004)",
@@ -17,7 +18,7 @@ angular.module('marvelLibrary').controller('CardListController', function ($scop
             path: "http://i.annihil.us/u/prod/marvel/i/mg/6/70/56f2aa61318e9",
             extension: "jpg"
         },
-    },{
+    }, {
         id: 581,
         title: "Thor (1998 - 2004)",
         description: "The Mighty Thunderer returns! Thor must rediscover his lost people and adjust to the challenges of ruling Asgard in this new take on a classic Marvel icon.",
@@ -35,7 +36,7 @@ angular.module('marvelLibrary').controller('CardListController', function ($scop
             path: "http://i.annihil.us/u/prod/marvel/i/mg/6/70/56f2aa61318e9",
             extension: "jpg"
         },
-    },{
+    }, {
         id: 581,
         title: "Thor (1998 - 2004)",
         description: "The Mighty Thunderer returns! Thor must rediscover his lost people and adjust to the challenges of ruling Asgard in this new take on a classic Marvel icon.",
@@ -53,5 +54,15 @@ angular.module('marvelLibrary').controller('CardListController', function ($scop
             path: "http://i.annihil.us/u/prod/marvel/i/mg/6/70/56f2aa61318e9",
             extension: "jpg"
         },
-    }]
-});
+    }];
+
+    $scope.$on('searchSubmit', function (event, info) {
+        console.log(info);
+        if (info.length > 0) {
+            $scope.hasResult = true;
+            $scope.cards = info;
+        } else {
+            $scope.hasResult = false;
+        }
+    });
+}]);

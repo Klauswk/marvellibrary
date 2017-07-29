@@ -1,7 +1,11 @@
 <link rel="stylesheet" type="text/css" href="components/cardList/styles.css">
 
 <div class="row cardList">
-    <div class="col-md-6 col-xl-6" ng-repeat="card in cards | limitTo: -100">
+    <div ng-if="!hasResult" class="jumbotron">
+        <h4 class="text-success text-center"> No result for this query </h4>
+        <a href="#searchBar" class="btn btn-outline-success"> Try Another One</a>
+    </div>
+    <div ng-if="hasResult" class="col-md-6 col-xl-6" ng-repeat="card in cards | limitTo: -100">
         <card card="{card}"></card>
     </div>
 </div>
