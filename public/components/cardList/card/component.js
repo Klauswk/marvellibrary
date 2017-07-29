@@ -5,5 +5,6 @@ angular.module('marvelLibrary').directive('card', [function () {
         scope: {
             card:'=',
         },
+        controller: 'CardController'
     };
 }]);
