@@ -1,0 +1,35 @@
+{
+  "name": "marvellibrary",
+  "version": "1.0.0",
+  "description": "An gridview using the marvel API",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "mocha --recursive",
+    "test:unit": "mocha --recursive test/unit",
+    "test:int": "mocha --recursive test/integration",
+    "start": "node app/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klauswk/marvellibrary.git"
+  },
+  "keywords": [],
+  "author": "Klaus Klein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Klauswk/marvellibrary/issues"
+  },
+  "homepage": "https://github.com/Klauswk/marvellibrary#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "marvel-api": "^1.1.0",
+    "noderssparser": "^0.2.1"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.4.1",
+    "supertest": "^3.0.0"
+  }
+}
