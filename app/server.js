@@ -2,7 +2,8 @@
 
 module.exports = function (app) {
 
-    const path = require("path");
+    const path = require('path');
+    const apiRoute = require('./api/routes');
 
     const promise = new Promise((resolve, reject) => {
         if (!app) {
@@ -20,6 +21,8 @@ module.exports = function (app) {
         app.use(bodyParser.urlencoded({ extended: true }));
         app.use(bodyParser.text());
         app.use(bodyParser.json());
+        
+        apiRoute(app);
 
         app.get('/', (req, res) => {
             res.sendFile(path.join(__dirname + '/../public/index.html'));
@@ -29,8 +32,9 @@ module.exports = function (app) {
             res.sendFile(path.join(__dirname + '/../public/index.html'));
         });
 
-        app.get('/api', (req, res) => {
-            res.sendFile(path.join(__dirname + '/../public/index.html'));
+        app.get('*', (req, res) => {
+            res.status(404);
+            res.sendFile(path.join(__dirname + '/../public/404.html'));
         });
 
 
@@ -39,7 +43,7 @@ module.exports = function (app) {
         });
 
         resolve(server);
-    }, (err) =>  {
+    }, (err) => {
         reject(err);
     });
     return promise;

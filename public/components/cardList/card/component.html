@@ -1,8 +1,16 @@
-<div class="card">
-    <img class="card-img-top img-thumbnail" src="{{card.imageLink}}" alt="Card image cap">
-    <div class="card-block">
-        <h4 class="card-title">{{card.title}}</h4>
-        <p class="card-text">{{card.text}}</p>
-        <a href="#" class="btn btn-primary">{{card.link}}</a>
+<link rel="stylesheet" type="text/css" href="components/cardList/card/styles.css">
+
+<div class="card card-outline-success card-space">
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <img class="img-fluid card-block" src="{{card.card.thumbnail.path + '/standard_fantastic.jpg'}}">
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="card-block">
+                <h4 class="card-title">{{card.card.title}}</h4>
+                <p class="card-text">{{card.card.description}}</p>
+                <a href="{{card.card.urls[0].url}}" class="btn btn-outline-success">Details</a>
+            </div>
+        </div>
     </div>
 </div>

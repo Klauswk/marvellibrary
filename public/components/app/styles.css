@@ -6,10 +6,18 @@
     margin-bottom: 0px;
 }
 
+.fixed-top {
+    margin-bottom: 20px;
+}
+
 .container-fluid{
     padding: 0px;
 }
 
 .navbar{
     margin-bottom: 0px;
+}
+
+.footer {
+  padding:10px;
 }

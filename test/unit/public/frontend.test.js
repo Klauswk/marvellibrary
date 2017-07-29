@@ -43,4 +43,16 @@ describe('Server Test', function() {
                 done();
             });
     });
+
+
+    it('Should return 404 html content on "/asd"', function(done) {
+        request(app)
+            .get('/asd')
+            .expect('Content-Type', "text/html; charset=UTF-8")
+            .expect(404)
+            .end(function(err, res) {
+                if (err) throw err;
+                done();
+            });
+    });
 });

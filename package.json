@@ -9,6 +9,10 @@
     "test:int": "mocha --recursive test/integration",
     "start": "node app/app.js"
   },
+  "config": {
+    "publicKey": "22be055d4907fd0dbd1f2e345c9fc5e8",
+    "privateKey": "c10046d3601560eda17f32d3d54c77beaf9df41d"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Klauswk/marvellibrary.git"
